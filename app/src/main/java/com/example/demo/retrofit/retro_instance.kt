@@ -30,7 +30,6 @@ interface ApiService{
     @POST("test")
     suspend fun postData(@Body todo: Todo): Todo
 
-
     @DELETE("test/{id}")
     suspend fun deleteData(@Path("id")id:Int): Todo
 }

@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("kotlin-kapt")
 }
 
 android {
@@ -77,4 +78,14 @@ dependencies {
 
     // Coroutines (needed for suspend functions in networking)
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
+
+
+    implementation("io.insert-koin:koin-android:4.1.1")
+
+
+    implementation("androidx.room:room-runtime:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1") // for annotation processing
+
+// Kotlin Extensions + Coroutines support
+    implementation("androidx.room:room-ktx:2.6.1")
 }
