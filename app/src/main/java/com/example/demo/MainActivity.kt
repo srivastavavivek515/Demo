@@ -38,10 +38,9 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )
 }
 
-@Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     DemoTheme {
-        Greeting("master 1")
+        Greeting("feature 4")
     }
 }
