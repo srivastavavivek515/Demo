@@ -9,12 +9,12 @@ import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query
 
+private const val BASE_URL = "https://yourapi.com/"
+
 val apiService: ApiService by lazy {
     Retrofit.Builder().baseUrl("").addConverterFactory(GsonConverterFactory.create()).build().create(
         ApiService::class.java)
 }
-
-
 
 
 interface ApiService{

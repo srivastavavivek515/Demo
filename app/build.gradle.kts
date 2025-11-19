@@ -60,4 +60,21 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
 // Gson converter (for JSON parsing)
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+
+
+
+    implementation("io.ktor:ktor-client-core:2.3.12")
+
+    // Android engine (uses OkHttp under the hood)
+    implementation("io.ktor:ktor-client-android:2.3.12")
+
+    // JSON serialization with Kotlinx
+    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.12")
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.12")
+
+    // Logging (for debugging API calls)
+    implementation("io.ktor:ktor-client-logging:2.3.12")
+
+    // Coroutines (needed for suspend functions in networking)
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
 }
