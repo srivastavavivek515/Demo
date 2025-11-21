@@ -3,6 +3,7 @@ package com.example.demo.koin_di.module
 import androidx.room.Dao
 import androidx.room.Database
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 import androidx.room.Query
 import androidx.room.Room
 import androidx.room.RoomDatabase
@@ -17,7 +18,7 @@ val dbModule = module {
     }
 }
 
-@Database(entities = [Person::class], version = 1, exportSchema = false)
+@Database(entities = [Person1::class], version = 1, exportSchema = false)
 abstract class MyRoomdatabase: RoomDatabase(){
     abstract val personDao: PersonDao
 }
@@ -25,8 +26,8 @@ abstract class MyRoomdatabase: RoomDatabase(){
 @Dao
 interface PersonDao{
     @Query("select * from person_table")
-    fun getAllPerson():List<Person>
+    fun getAllPerson():List<Person1>
 }
 
 @Entity("person_table")
-data class Person(val name:String)
+data class Person1(val name:String,@PrimaryKey(autoGenerate = true) val id:Int)

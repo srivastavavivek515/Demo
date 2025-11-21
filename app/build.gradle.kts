@@ -88,4 +88,11 @@ dependencies {
 
 // Kotlin Extensions + Coroutines support
     implementation("androidx.room:room-ktx:2.6.1")
+
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.3")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.3")
+
+    // REQUIRED for viewModel() in Compose
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.3")
 }
