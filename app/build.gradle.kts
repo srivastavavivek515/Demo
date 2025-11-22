@@ -95,4 +95,8 @@ dependencies {
 
     // REQUIRED for viewModel() in Compose
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.3")
+
+
+    implementation(libs.androidx.navigation3.runtime)
+    implementation(libs.androidx.navigation3.ui)
 }
